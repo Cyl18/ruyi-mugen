@@ -89,7 +89,7 @@ function recursion_run() {
     if [[ $? -eq 0 ]]; then
         rm -rf /tmp/ruyi_device/test
         touch /tmp/ruyi_device/test
-        recursion_run "$now_exec\n/tmp/ruyi_device/test" 1
+        recursion_run "$now_exec\n/tmp/ruyi_device/test"
         #recursion_run "$now_exec" "y"
         return $?;
     fi
