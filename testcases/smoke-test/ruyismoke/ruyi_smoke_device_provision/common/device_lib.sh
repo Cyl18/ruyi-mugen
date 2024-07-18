@@ -81,16 +81,16 @@ function recursion_run() {
         recursion_run "$now_exec\nn" 2
         ret=$(expr $ret + $?)
         # stop and quit
-        #recursion_run "$now_exec\ny" 2
-        #ret=$(expr $ret + $?)
+        recursion_run "$now_exec\ny" 1
+        ret=$(expr $ret + $?)
         return $ret;
     fi
     grep "Please give the path for the target's whole disk" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
-        #rm -rf /tmp/ruyi_device/test
-        #touch /tmp/ruyi_device/test
-        #recursion_run "$now_exec\n/tmp/ruyi_device/test" 1
-        recursion_run "$now_exec" "y"
+        rm -rf /tmp/ruyi_device/test
+        touch /tmp/ruyi_device/test
+        recursion_run "$now_exec\n/tmp/ruyi_device/test" 1
+        #recursion_run "$now_exec" "y"
         return $?;
     fi
     grep "NOTE: You have to consult the official documentation" /tmp/ruyi_device/output
