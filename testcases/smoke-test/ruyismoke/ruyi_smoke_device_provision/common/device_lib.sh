@@ -28,8 +28,8 @@ function test_ouput() {
     if [[ "$output" == '(y/N)' ]]; then
         result_item=('y' 'n');
     elif [[ "$output" =~ (1-.) ]]; then
-        temp=${output:0-3:2}
-        num=${temp//-/}
+        local temp=${output:0-3:2}
+        local num=${temp//-/}
         result_item=($(seq $num));
     else
         result_item=('e');
