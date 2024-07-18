@@ -36,6 +36,12 @@ function test_ouput() {
     fi
 }
 
+
+# 1 is for success
+# 2 is for failure
+# y is for terminate next
+# empty is for continue
+
 function recursion_run() {
     local now_exec=$1
     local end_exec=$2
