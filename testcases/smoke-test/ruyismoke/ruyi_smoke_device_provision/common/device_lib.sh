@@ -36,7 +36,6 @@ function test_ouput() {
     fi
 }
 
-
 # 1 is for success
 # 2 is for failure
 # y is for terminate next
